@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello world</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+     <h2>Bienvenido a Truchat! El chat mas trucho que podes encontrar ahre</h2>
+    <div class="listWindow">
+      <ul id="messages-list"></ul>
+      <div class="inputs">
+         <input type="text" id="message-box" />
+         <input
+           type="button"
+           id="send-message"
+           value="enviar"
+           onclick="sendMessage()"
+         />
+      </div>
+    </div>
+    <link rel="stylesheet" href="styles.css" />
+  </body>
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script src="main.js"></script>
+</html>

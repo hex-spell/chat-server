@@ -1,9 +1,19 @@
 import { Socket } from "socket.io";
+import { Application } from "express";
+const express = require("express");
+const app: Application = express();
 
-const io = require("socket.io")(3000);
+app.use(express.static("public"));
+
+const server = app.listen(3000);
+
+const io = require("socket.io").listen(server);
 
 io.on("connect", (socket: Socket) => {
   socket.on("message", (data: string) => {
-    socket.broadcast.send(`${socket.client.id} : ${data}`);
+    io.sockets.send(`${socket.client.id} : ${data}`);
+  });
+  socket.on("newClient", () => {
+    io.sockets.emit("clientConnected",socket.client.id);
   });
 });
