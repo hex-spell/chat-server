@@ -17,7 +17,7 @@
   "scripts": {
     "start:dev": "nodemon",
     "build": "rimraf ./build && tsc",
-    "start": "yarn run build && node build/index.js",
+    "start": "node build/index.js",
     "start:client": "ts-node src/client.ts"
   },
   "dependencies": {
