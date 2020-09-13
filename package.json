@@ -8,6 +8,7 @@
   "devDependencies": {
     "@types/node": "^14.10.1",
     "@types/socket.io": "^2.1.11",
+    "@types/express": "^4.17.8",
     "nodemon": "^2.0.4",
     "rimraf": "^3.0.2",
     "ts-node": "^9.0.0",
@@ -20,7 +21,6 @@
     "start:client": "ts-node src/client.ts"
   },
   "dependencies": {
-    "@types/express": "^4.17.8",
     "express": "^4.17.1",
     "socket.io": "^2.3.0"
   }
